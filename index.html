@@ -1,0 +1,38 @@
+
+<div id="target">
+  <button id="clickMeBtn">Click me (target)</button>
+</div>
+
+<button id="startBtn">Start AutoClick</button>
+<button id="stopBtn">Stop</button>
+<p id="status">Stopped</p>
+
+<script>
+  let intervalId = null;
+
+  function startAutoClick() {
+    if (intervalId) return; // already running
+    const el = document.getElementById("clickMeBtn"); // element to auto-click
+    intervalId = setInterval(() => {
+      el.click(); // triggers the button’s click event
+    }, 300); // every 300 ms
+    document.getElementById("status").textContent = "Running...";
+  }
+
+  function stopAutoClick() {
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+    document.getElementById("status").textContent = "Stopped";
+  }
+
+  // Attach to buttons
+  document.getElementById("startBtn").addEventListener("click", startAutoClick);
+  document.getElementById("stopBtn").addEventListener("click", stopAutoClick);
+
+  // Example: show a log when the target is clicked
+  document.getElementById("clickMeBtn").addEventListener("click", () => {
+    console.log("Target button clicked at " + new Date().toLocaleTimeString());
+  });
+</script>
