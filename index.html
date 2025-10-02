@@ -11,11 +11,11 @@
   let intervalId = null;
 
   function startAutoClick() {
-    if (intervalId) return; // already running
-    const el = document.getElementById("clickMeBtn"); // element to auto-click
+    if (intervalId) return; 
+    const el = document.getElementById("clickMeBtn"); 
     intervalId = setInterval(() => {
-      el.click(); // triggers the button’s click event
-    }, 300); // every 300 ms
+      el.click(); 
+    }, 300); 
     document.getElementById("status").textContent = "Running...";
   }
 
@@ -27,12 +27,13 @@
     document.getElementById("status").textContent = "Stopped";
   }
 
-  // Attach to buttons
+ 
   document.getElementById("startBtn").addEventListener("click", startAutoClick);
   document.getElementById("stopBtn").addEventListener("click", stopAutoClick);
 
-  // Example: show a log when the target is clicked
+
   document.getElementById("clickMeBtn").addEventListener("click", () => {
     console.log("Target button clicked at " + new Date().toLocaleTimeString());
   });
+
 </script>
