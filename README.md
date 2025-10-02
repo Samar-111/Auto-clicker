@@ -17,7 +17,7 @@ A simple client-side autoclicker that repeatedly triggers clicks on an element i
 
 ## 🚀 Installation
 
-1. Add this snippet to your HTML page (for demo):
+1. Add this snippet to your HTML page 
 
 ```html
 <div id="target">
@@ -28,7 +28,7 @@ A simple client-side autoclicker that repeatedly triggers clicks on an element i
 <button id="stopBtn">Stop</button>
 <p id="status">Stopped</p>
 
-2.Add the JavaScript before your closing </body> tag:
+
 
 ```javascript
 <script>
