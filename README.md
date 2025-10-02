@@ -30,7 +30,7 @@ A simple client-side autoclicker that repeatedly triggers clicks on an element i
 
 
 
-```javascript
+
 <script>
   let intervalId = null;
 
