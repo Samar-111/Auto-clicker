@@ -19,7 +19,7 @@ A simple client-side autoclicker that repeatedly triggers clicks on an element i
 
 1. Add this snippet to your HTML page (for demo):
 
-html
+```html
 <div id="target">
   <button id="clickMeBtn">Click me (target)</button>
 </div>
@@ -29,6 +29,7 @@ html
 <p id="status">Stopped</p>
 
 2.Add the JavaScript before your closing </body> tag:
+
 ```javascript
 <script>
   let intervalId = null;
